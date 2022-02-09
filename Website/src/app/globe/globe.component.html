@@ -1,0 +1,26 @@
+<canvas #globeCanvas (window:resize)="onWindowResize()"></canvas>
+
+<div id = "info" [style.display]= "displayType" [style.top] = "top"  [style.left] = "left">
+    <div id = "displayCountryName">
+        <b>Country :</b>   {{countryName}}
+    </div>
+    <div id = "displayLiteracyRate">
+       <b>Literacy Rate :</b>  {{literacyRate}} %
+    </div>
+</div>
+
+<app-tutorial></app-tutorial>
+ 
+<div id = "sliderBox">
+    <mat-slider thumbLabel tickInterval="1" [(ngModel)] = "currentYear" min="1900" max = "2015"  (ngModelChange)="onSlide()"></mat-slider>
+</div> 
+
+<div id = "startYear">
+    <b>1900</b>
+</div>
+
+
+<div id = "endYear">
+    <b>2015</b>
+</div>
+

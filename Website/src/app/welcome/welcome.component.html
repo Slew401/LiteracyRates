@@ -1,0 +1,17 @@
+<div id = "bookContainer">
+
+     <video onloadedmetadata="this.muted = true" autoplay muted  (ended)="showEnter()" id = "bookOpen">
+        <source src = "../../assets/images/video/book.mp4" type ="video/mp4"> 
+    </video>
+
+</div>
+ 
+<div *ngIf = "enterShown" id = "enterGlobe">
+    <nav>
+        <a routerLink="/globe">
+            <img id = "enter" src="../../assets/images/tutorial/enter.png">
+        </a>
+    </nav>
+</div>
+
+ 
